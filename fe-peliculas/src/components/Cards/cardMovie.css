@@ -1,0 +1,17 @@
+.containerCard {
+  padding: 18px 18px;
+  background-color: rgba(177, 149, 136, 0.174);
+  border-radius: 10px;
+}
+.cardBody {
+  border: 0px;
+  cursor: context-menu;
+}
+.cardBody:hover .containerHoverImg {
+  display: flex !important;
+}
+.btn-comment{
+  background-color:rgb(208, 105, 61) !important;
+  color: white !important;
+  font-weight: 500 !important;
+}

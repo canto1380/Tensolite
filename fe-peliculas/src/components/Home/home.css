@@ -1,0 +1,7 @@
+.title {
+    font-family: "Cinzel", serif;
+    font-size: 4vw;
+    color: rgb(152, 152, 152);
+    align-items: center; /** Y-axis align **/
+    justify-content: center; /** X-axis align **/
+  }

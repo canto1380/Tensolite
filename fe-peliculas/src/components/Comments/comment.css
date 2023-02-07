@@ -1,0 +1,21 @@
+.title {
+  font-family: "Cinzel", serif;
+  font-size: 4vw;
+  color: rgb(152, 152, 152);
+  align-items: center; /** Y-axis align **/
+  justify-content: center; /** X-axis align **/
+}
+
+.text-inf {
+  font-family: "Cinzel", serif;
+}
+.title-comment {
+  font-family: "Cinzel", serif;
+  font-size: 3vw;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}

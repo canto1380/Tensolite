@@ -1,0 +1,11 @@
+.aa{
+  animation: spin 1.5s linear infinite;
+  position: absolute; /* cambiamos de fixed a absolute */
+  /* Ponemos el valor de left, bottom, right y top en 0 */
+  left: -400px;
+  bottom: 0; 
+  right: 0; 
+  top: 0; 
+  margin: auto;
+  z-index: 9999;
+}

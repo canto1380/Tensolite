@@ -1,0 +1,61 @@
+.sizeIcon {
+    font-size: 25px;
+  }
+  
+  .dropdownColor{
+    color: rgb(208, 105, 61) !important;
+  }
+
+  .dropdownNickname{
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+  }
+  .dropdownNickname:hover {
+    background-color: rgb(236, 236, 236);
+  }
+  .li-drop{
+    align-self: center;
+  }
+  .drop{
+    background-color: transparent !important;
+    border: 0px !important;
+    color: #FFFFFF8C !important;
+  }
+  .drop:hover{
+    color: #ffffffe1 !important;
+  }
+  
+  @media(max-width: 991px) {
+    .itemNavAlign {
+      text-align: start !important;
+    }
+    .btnHidden{
+      visibility: hidden;
+    }
+    .menuAlign{
+      text-align-last: left;
+    }
+    .iconHidden{
+      visibility: hidden;
+      position: absolute;
+    }
+    .w-responsive{
+      width: 100%;
+    }
+    .p-responsive{
+      padding-left: 0px !important;
+    }
+    .prueba {
+      justify-items: first baseline;
+    }
+  
+  }
+  
+  @media (min-width: 992px) {
+    .dropdownAlign {
+      position: absolute !important;
+      left: -100% !important;
+    }
+  }
+  
