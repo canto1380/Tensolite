@@ -42,7 +42,7 @@ Este proyecto fue creado con las herramientas [React](https://es.reactjs.org/), 
 6. Se ejecutara la aplicacion en un servidor local (localhost)
 
 - Parte del servidor:
-
+** Servidor ejecutado desde XAMPP
 1. Visualizar el archivo db.sql en el directorio tensolite/be/database
 2. En una interfaz de MySQL, importar el archov db.sql para clonar la DB a base de ejemplo
 
