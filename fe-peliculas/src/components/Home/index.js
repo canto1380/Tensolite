@@ -8,7 +8,8 @@ const Home = () => {
   const { movies, getMovies } = useContext(ContextMovie);
   useEffect(() => {
     getMovies();
-  }, [getMovies]);
+    // eslint-disable-next-line
+  }, []);
   return (
     <div className="container">
       <p className="title m-0 pt-5">Peliculas</p>

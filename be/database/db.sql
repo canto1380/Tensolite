@@ -39,7 +39,7 @@ create table if not exists comentario (
 	foreign key(id_pelicula) references pelicula(id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into usuario('email','nombre','apellido','clave') values
+insert into usuario(`email`,`nombre`,`apellido`,`clave`) values
 	('prueba1@gmail.com', 'nombre1','apellido1','123456'),
 	('prueba2@gmail.com', 'nombre2','apellido2','456789'),
 	('prueba3@gmail.com', 'nombre3','apellido3','123789'),

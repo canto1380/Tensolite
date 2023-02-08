@@ -37,8 +37,9 @@ const Categories = () => {
   ];
 
   useEffect(() => {
-    getCategory(null);
-  }, [getCategory]);
+    getCategory();
+    // eslint-disable-next-line
+  }, []);
   return (
     <Container className="py-5 my-5">
       <Row className="justify-content-center">

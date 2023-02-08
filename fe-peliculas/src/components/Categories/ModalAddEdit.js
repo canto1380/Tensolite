@@ -43,6 +43,7 @@ const ModalAddEdit = (props) => {
           setLoading(false);
           e.target.reset();
           clearState();
+          window.location.href = `/categoria/`
           setModalShow(false);
         }, 3000);
       })
@@ -64,6 +65,7 @@ const ModalAddEdit = (props) => {
           setLoading(false);
           e.target.reset();
           clearState();
+          window.location.href = `/categoria/`
           setModalShow(false);
         }, 3000);
       })

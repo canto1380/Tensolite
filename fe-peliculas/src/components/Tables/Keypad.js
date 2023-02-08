@@ -13,18 +13,17 @@ const Keypad = ({ id, deleted, id_name }) => {
   const [loading, setLoading] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
-
   const BASEURL = `${process.env.REACT_APP_API_URL}/${id_name}.php/?id=`;
   const f = new FormData();
   f.append("METHOD", "PUT");
   const handleBtn = async (id) => {
     if (deleted) {
-      restoreCategory(id);
+      restoreFunction(id);
     } else {
-      deleteCategory(id);
+      deletefuntion(id);
     }
   };
-  const deleteCategory = async (id) => {
+  const deletefuntion = async (id) => {
     Swal.fire({
       title: `Estas seguro que desea eliminar la ${id_name}?`,
       text: "Tenga en cuenta que se la puede recuperar",
@@ -43,6 +42,7 @@ const Keypad = ({ id, deleted, id_name }) => {
               setLoading(true);
               setTimeout(() => {
                 setLoading(false);
+                window.location.href = `/${id_name}/`;
               }, 3000);
             })
             .catch((error) => {
@@ -54,20 +54,20 @@ const Keypad = ({ id, deleted, id_name }) => {
         console.log(error);
       });
   };
-  const restoreCategory = async (id) => {
+  const restoreFunction = async (id) => {
     await axios
       .post(`${BASEURL}${id}`, f)
       .then((response) => {
         setLoading(true);
         setTimeout(() => {
           setLoading(false);
+          window.location.href = `/${id_name}/`
         }, 3000);
       })
       .catch((error) => {
         console.log(error);
       });
   };
-
 
   return (
     <Container>

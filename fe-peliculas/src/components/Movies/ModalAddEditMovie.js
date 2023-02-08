@@ -63,6 +63,7 @@ const ModalAddEditMovie = (props) => {
         setTimeout(() => {
           setLoading(false);
           e.target.reset();
+          window.location.href = `/pelicula/`
           clearState();
           setModalShow(false);
         }, 3000);
@@ -83,6 +84,8 @@ const ModalAddEditMovie = (props) => {
         setTimeout(() => {
           setLoading(false);
           e.target.reset();
+          window.location.href = `/pelicula/`
+          clearState();
           clearState();
           setModalShow(false);
         }, 3000);
@@ -107,7 +110,8 @@ const ModalAddEditMovie = (props) => {
 
   useEffect(() => {
     getCategory();
-  }, [getCategory]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Modal

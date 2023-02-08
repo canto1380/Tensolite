@@ -51,7 +51,8 @@ const columns = [
 
   useEffect(() => {
     getMovie();
-  }, [getMovie]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Container className="py-5 my-5">

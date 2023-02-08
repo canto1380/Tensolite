@@ -28,6 +28,7 @@ const MovieContext = (props) => {
       .then((resp) => {
         const response = resp.data;
         setComment(response);
+
       })
       .catch((error) => {
         console.log(error);

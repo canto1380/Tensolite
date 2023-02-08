@@ -54,6 +54,7 @@ const Comments = () => {
         setTimeout(() => {
           setLoading(false);
           e.target.reset();
+          window.location.href = `/comment/${id}`
         }, 3000);
       })
       .catch((error) => {
@@ -70,11 +71,13 @@ const Comments = () => {
   }, []);
   useEffect(() => {
     getComment(PARAMSURLCOMMENT);
-  }, [PARAMSURLCOMMENT, getComment]);
+    // eslint-disable-next-line
+  }, [PARAMSURLCOMMENT]);
 
   useEffect(() => {
     getMovies(PARAMSURLMOVIE);
-  }, [PARAMSURLMOVIE, getMovies]);
+    // eslint-disable-next-line
+  }, [PARAMSURLMOVIE]);
 
   return (
     <Container className="my-5 px-5">

@@ -11,8 +11,8 @@ const PrivateRoutes = () => {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path="/login" element={<Login />} />
-            <Route path='/peliculas' element={<Movies />} />
-            <Route path='/categorias' element={<Categories/>}/>
+            <Route path='/pelicula' element={<Movies />} />
+            <Route path='/categoria' element={<Categories/>}/>
             <Route path='/comment/:id' element={<Comments />} />
             <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>

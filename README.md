@@ -35,10 +35,11 @@ Este proyecto fue creado con las herramientas [React](https://es.reactjs.org/), 
 - Parte del cliente:
 
 1. Clonar el repositorio en el directorio `https://github.com/canto1380/tensolite`
-2. En consola (ctrl+j) ejecutar: cd fe-peliculas
+2. En consola (ctrl+j) ejecutar: cd Tensolite/fe-peliculas
 3. Ejecutar en consola `npm i` para que instalen las dependencias necesarias
-4. Ejecutar en consola `npm start` para iniciar la app
-5. Se ejecutara la aplicacion en un servidor local (localhost:3000)
+4. En el directorio fe-peliculas, crear un archivo .env y copiar lo que esta en el archivo .env.sample 
+5. Ejecutar en consola `npm start` para iniciar la app
+6. Se ejecutara la aplicacion en un servidor local (localhost)
 
 - Parte del servidor:
 

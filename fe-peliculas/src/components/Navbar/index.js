@@ -59,13 +59,13 @@ const Navb = () => {
                     Menu
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="dropdownAlign">
-                    <Dropdown.Item href="/categorias">
+                    <Dropdown.Item href="/categoria">
                       <MdOutlineCategory
                         className={`sizeIcon dropdownColor me-2`}
                       />
                       <span className="fw-bold">Categorias</span>
                     </Dropdown.Item>
-                    <Dropdown.Item href="/peliculas" className="py-2">
+                    <Dropdown.Item href="/pelicula" className="py-2">
                       <MdOutlineLocalMovies
                         className={`sizeIcon dropdownColor me-2`}
                       />
