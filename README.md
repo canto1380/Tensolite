@@ -46,11 +46,6 @@ Este proyecto fue creado con las herramientas [React](https://es.reactjs.org/), 
 1. Visualizar el archivo db.sql en el directorio tensolite/be/database
 2. En una interfaz de MySQL, importar el archov db.sql para clonar la DB a base de ejemplo
 
-# Link del proyecto
-
-El siguiente link contiene el proyecto colgado a modo de prueba, para que el que desee pueda ver de que se trata el proyecto
-
-[Link del proyecto](https://therollingpostnews.netlify.app/)
 
 # Construido con 🛠
 
