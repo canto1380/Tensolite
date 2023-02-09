@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Spinner } from "react-bootstrap";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { MdRestore } from "react-icons/md";
@@ -12,6 +12,8 @@ import ModalAddEditMovie from "../Movies/ModalAddEditMovie";
 const Keypad = ({ id, deleted, id_name }) => {
   const [loading, setLoading] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  const [category, setCategory] = useState([])
+  const [movie, setMovie] = useState([])
 
   const BASEURL = `${process.env.REACT_APP_API_URL}/${id_name}.php/?id=`;
   const f = new FormData();
@@ -68,6 +70,36 @@ const Keypad = ({ id, deleted, id_name }) => {
         console.log(error);
       });
   };
+  const getCategoryById = async (id) => {
+    await axios
+      .get(`${BASEURL}${id}`)
+      .then((resp) => {
+        const response = resp.data;
+        setCategory(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const getMovieById = async(id) => {
+    await axios
+      .get(`${BASEURL}${id}`)
+      .then((resp) => {
+        const response = resp.data;
+        setMovie(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  useEffect(() => {
+    getCategoryById(id);
+    // eslint-disable-next-line
+  },[id]);
+  useEffect(() => {
+    getMovieById(id)
+    // eslint-disable-next-line
+  },[id])
 
   return (
     <Container>
@@ -89,6 +121,7 @@ const Keypad = ({ id, deleted, id_name }) => {
               setModalShow={setModalShow}
               functionBtn="edit"
               id={id}
+              category={category}
             />
           ) : (
             <ModalAddEditMovie
@@ -97,6 +130,7 @@ const Keypad = ({ id, deleted, id_name }) => {
               setModalShow={setModalShow}
               functionBtn="edit"
               id={id}
+              movie={movie}
             />
           )}
           {deleted ? (

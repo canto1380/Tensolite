@@ -17,13 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       header("HTTP/1.1 400 Bad Request");
       exit();
     } else {
-      $query = "select p.id, p.nombre_pelicula, p.descip_pelicula, p.anio_estreno, c.nombre_categoria, p.deleted from pelicula As p, categoria AS c where p.id_categoria = c.id AND p.id=" . $_GET['id'];
+      $query = "select p.id, p.nombre_pelicula, p.descip_pelicula, p.anio_estreno, p.id_categoria, c.nombre_categoria, p.deleted from pelicula As p, categoria AS c where p.id_categoria = c.id AND p.id=" . $_GET['id'];
       $resultado = metodoGet($query);
       echo json_encode($resultado->fetch(PDO::FETCH_ASSOC));
     }
   } else {
     $query = "select * from pelicula";
-    $query = 'select p.id, p.nombre_pelicula, p.descip_pelicula, p.anio_estreno, c.nombre_categoria, p.deleted from pelicula As p, categoria AS c where p.id_categoria = c.id';
+    $query = 'select p.id, p.nombre_pelicula, p.descip_pelicula, p.anio_estreno, p.id_categoria, c.nombre_categoria, p.deleted from pelicula As p, categoria AS c where p.id_categoria = c.id';
     $resultado = metodoGet($query);
     echo json_encode($resultado->fetchAll());
   }

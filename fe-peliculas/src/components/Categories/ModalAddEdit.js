@@ -5,7 +5,7 @@ import { validaNombreChar50 } from "../../utils/validations/validation";
 import axios from "axios";
 
 const ModalAddEdit = (props) => {
-  const { functionBtn, modalShow, setModalShow, id, ...rest } = props;
+  const { functionBtn, modalShow, setModalShow, id, category, ...rest } = props;
   const [categoryName, setCategoryName] = useState("");
   const [errorServer, setErrorServer] = useState(false);
   const [errorValid, setErrorValid] = useState(false);
@@ -100,6 +100,7 @@ const ModalAddEdit = (props) => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control
               onChange={(e) => setCategoryName(e.target.value)}
+              defaultValue={category?.nombre_categoria}
               type="text"
               minLength="2"
               maxLength="50"

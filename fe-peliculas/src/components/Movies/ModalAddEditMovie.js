@@ -11,7 +11,7 @@ import { ContextMovie } from "../../Context/MovieContext";
 
 const ModalAddEditMovie = (props) => {
   const { category, getCategory } = useContext(ContextMovie);
-  const { functionBtn, setModalShow, id, ...rest } = props;
+  const { functionBtn, setModalShow, id, movie, ...rest } = props;
   const [dataMovie, setDataMovie] = useState({
     nombre_pelicula: "",
     descip_pelicula: "",
@@ -133,6 +133,7 @@ const ModalAddEditMovie = (props) => {
             <p className="fw-bold text-dark mb-1">Nombre Pelicula</p>
             <Form.Control
               onChange={handleChange}
+              defaultValue={movie?.nombre_pelicula}
               name="nombre_pelicula"
               type="text"
               minLength="2"
@@ -150,6 +151,7 @@ const ModalAddEditMovie = (props) => {
                 as="textarea"
                 rows={3}
                 onChange={handleChange}
+                defaultValue={movie?.descip_pelicula}
                 name="descip_pelicula"
                 type="textArea"
                 minLength="15"
@@ -168,6 +170,7 @@ const ModalAddEditMovie = (props) => {
               name="anio_estreno"
               type="Select"
               placeholder="Seleccione.."
+              defaultValue={movie?.anio_estreno}
             >
               <option value={2015}>2015</option>
               <option value={2016}>2016</option>
@@ -180,6 +183,7 @@ const ModalAddEditMovie = (props) => {
             <p className="fw-bold text-dark mb-1">Categoria</p>
             <Form.Select
               onChange={handleChange}
+              defaultValue={movie?.id_categoria}
               name="id_categoria"
               type="Select"
               placeholder="Seleccione.."
